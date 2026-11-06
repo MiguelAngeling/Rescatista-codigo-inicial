@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cdd32vav0kqtp"]
+
+[ext_resource type="Script" uid="uid://dty1dwsu5ptjb" path="res://Scripts/main_menu.gd" id="1_3bb84"]
+
+[node name="MainMenu" type="Control" unique_id=1330644381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3bb84")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1335687621]
+layout_mode = 0
+offset_right = 637.0
+offset_bottom = 359.0
+color = Color(0.13725491, 0.023529412, 0.4862745, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1342805541]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 71.0
+offset_right = 530.0
+offset_bottom = 270.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=146610114]
+layout_mode = 2
+text = "RESCATISTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=120589042]
+layout_mode = 2
+text = "Jugar"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

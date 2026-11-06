@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b7kneewynki55"]
+
+[ext_resource type="PackedScene" uid="uid://cxs8a5q0c3v0u" path="res://Escenas/player.tscn" id="1_wtr28"]
+[ext_resource type="Script" uid="uid://cups65ec5udw3" path="res://Scripts/wave_manager.gd" id="2_wq4lv"]
+[ext_resource type="PackedScene" uid="uid://dbxe4fkrrbmj5" path="res://Escenas/Enemigos/EnemyScientist.tscn" id="3_1y35x"]
+[ext_resource type="PackedScene" uid="uid://cbmxmcj5dmmn6" path="res://Escenas/Enemigos/EnemySoldier.tscn" id="4_87opf"]
+[ext_resource type="PackedScene" uid="uid://cmups5hbpktws" path="res://Escenas/Enemigos/EnemyMonster.tscn" id="5_nixnn"]
+[ext_resource type="PackedScene" uid="uid://dp1x8scg2xn1i" path="res://Escenas/HUD.tscn" id="6_wq4lv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lka76"]
+
+[node name="MainArena" type="Node2D" unique_id=1927666334]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=568002439]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1499903445]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=167568951]
+shape = SubResource("WorldBoundaryShape2D_lka76")
+
+[node name="Player" parent="." unique_id=669780470 groups=["player"] instance=ExtResource("1_wtr28")]
+
+[node name="WaveManager" type="Node" parent="." unique_id=2139404713]
+script = ExtResource("2_wq4lv")
+scientist_scene = ExtResource("3_1y35x")
+soldier_scene = ExtResource("4_87opf")
+monster_scene = ExtResource("5_nixnn")
+
+[node name="Hud" parent="." unique_id=963899073 instance=ExtResource("6_wq4lv")]

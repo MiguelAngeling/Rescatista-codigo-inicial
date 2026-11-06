@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dp1x8scg2xn1i"]
+
+[ext_resource type="Script" uid="uid://di0k3pdo8gima" path="res://Scripts/hud.gd" id="1_j171n"]
+
+[node name="Hud" type="CanvasLayer" unique_id=963899073]
+script = ExtResource("1_j171n")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1843015491]
+offset_left = -308.0
+offset_top = -166.0
+offset_right = -80.0
+offset_bottom = -139.0
+
+[node name="TransformationBar" type="ProgressBar" parent="." unique_id=161962332]
+offset_left = -307.0
+offset_top = -131.0
+offset_right = -77.0
+offset_bottom = -104.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=763417925]
+offset_left = -299.0
+offset_top = -162.0
+offset_right = -259.0
+offset_bottom = -139.0
+text = "HP"
+
+[node name="Label2" type="Label" parent="." unique_id=486195451]
+offset_left = -254.0
+offset_top = -131.0
+offset_right = -131.0
+offset_bottom = -108.0
+text = "Transformacion"

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cxs8a5q0c3v0u"]
+
+[ext_resource type="Script" uid="uid://beuokdjehix" path="res://Scripts/player.gd" id="1_cnkc8"]
+[ext_resource type="PackedScene" uid="uid://5ttendxqv4aw" path="res://Escenas/Bullet.tscn" id="2_i8vih"]
+[ext_resource type="PackedScene" uid="uid://btfpkceqvhpxt" path="res://Escenas/ChildMonster.tscn" id="3_qgqwx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lka76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8abd"]
+size = Vector2(24, 32)
+
+[node name="Player" type="CharacterBody2D" unique_id=669780470]
+script = ExtResource("1_cnkc8")
+bullet_scene = ExtResource("2_i8vih")
+monster_transformation_scene = ExtResource("3_qgqwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=790340895]
+texture = SubResource("CanvasTexture_lka76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1569898349]
+shape = SubResource("RectangleShape2D_j8abd")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1920495784]

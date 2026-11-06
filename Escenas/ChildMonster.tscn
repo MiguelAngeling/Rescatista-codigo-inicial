@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://btfpkceqvhpxt"]
+
+[ext_resource type="Script" uid="uid://bx054y3ss37je" path="res://Scripts/child_monster.gd" id="1_qg3y6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_i8vih"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8abd"]
+radius = 48.0
+
+[node name="ChildMonster" type="Area2D" unique_id=924792976]
+script = ExtResource("1_qg3y6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=639329740]
+texture = SubResource("CanvasTexture_i8vih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1298728275]
+shape = SubResource("CircleShape2D_j8abd")
